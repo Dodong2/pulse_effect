@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: gray;
+}
+
+.pulse {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #0ef;
+    border-radius: 50%;
+}
+.pulse span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    border-radius:inherit;
+    opacity: .8;
+    animation: pulse 4s ease-out infinite;
+    animation-delay: calc(1s * var(--i));
+}
+
+@keyframes pulse {
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
